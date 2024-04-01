@@ -1,0 +1,171 @@
+.contacts {
+  background: linear-gradient(to bottom, transparent 340px, $main-color 340px);
+  color: $black;
+
+  font-family: 'Montserrat';
+  font-size: 12px;
+  line-height: 1.83;
+  letter-spacing: 0.04em;
+  font-weight: 500;
+
+  @include tablet-only {
+    font-size: 14px;
+    line-height: 1.83;
+
+    margin: 0 auto;
+    padding-top: 80px;
+
+    background: linear-gradient(
+      to bottom,
+      transparent 390px,
+      $main-color 390px
+    );
+  }
+
+  &__btn {
+    min-width: 196px;
+  }
+
+  @include desktop {
+    font-size: 16px;
+    line-height: 1.83;
+
+    margin: 0 auto;
+    padding-top: 48px;
+
+    background: linear-gradient(
+      to bottom,
+      transparent 148px,
+      $main-color 148px
+    );
+  }
+}
+
+.contacts__title {
+  font-size: 0px;
+  text-indent: -9999px;
+  white-space: nowrap;
+}
+.contacts__card {
+  margin-bottom: 32px;
+
+  @include tablet {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 16px;
+
+    margin-bottom: 60px;
+  }
+
+  @include desktop {
+    gap: 32px;
+    margin-bottom: 64px;
+  }
+}
+.contacts__card-item {
+  background: $white;
+  min-width: 280px;
+
+  padding: 40px 32px;
+  border-radius: 24px;
+
+  box-shadow: 0px 8px 30px rgba(212, 20, 67, 0.1);
+
+  &:not(:last-child) {
+    margin-bottom: 20px;
+
+    @include tablet {
+      margin-bottom: 0;
+    }
+  }
+
+  @include tablet {
+    width: 224px;
+    min-width: 224px;
+
+    padding: 40px 24px;
+    margin: 0;
+  }
+
+  @include desktop {
+    width: 368px;
+  }
+}
+.contacts__restaurant {
+  background: $accent-color;
+
+  text-transform: uppercase;
+  font-size: 12px;
+  border-radius: 4px;
+
+  display: inline-block;
+  padding: 0 15px;
+  margin-bottom: 20px;
+
+  @include tablet {
+    font-size: 16px;
+    margin-bottom: 32px;
+  }
+  @include desktop {
+    font-size: 16px;
+    margin-bottom: 32px;
+  }
+}
+.contacts__city {
+  margin-bottom: 8px;
+}
+.contacts__restaurant-adress {
+  color: $brown;
+}
+.contacts__restaurant-schedule {
+}
+.contacts__restaurant-schedule-item {
+  margin-bottom: 8px;
+}
+.contacts__restaurant-schedule-item--day {
+}
+.contacts__restaurant-schedule-item--time {
+  color: $grey-text;
+}
+.contacts__adress {
+}
+.contacts__adress-item {
+}
+.contacts__adress-item--phone {
+}
+.contacts__adress-item--mail {
+}
+.contacts__buttons {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-bottom: 40px;
+
+  @include tablet {
+    flex-direction: row;
+    align-items: normal;
+    justify-content: center;
+
+    gap: 16px;
+  }
+
+  @include desktop {
+    padding-bottom: 120px;
+  }
+}
+
+.contacts__buttons-item {
+  &:not(:last-child) {
+    margin-bottom: 16px;
+  }
+}
+
+//extra sryle
+.contacts__line {
+  border-bottom: 1px solid #e1e1e1;
+  margin: 24px 0;
+
+  @include tablet-only {
+    margin: 32px 0;
+  }
+}

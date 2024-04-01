@@ -1,0 +1,193 @@
+<header class="header" id="home">
+  <div class="container">
+    <a href="#home" class="logo__link">
+      <img src="./images/logo-icon.png" alt="logo" class="logo-icon" />
+    </a>
+    <nav class="nav" data-menu>
+      <ul class="nav__list">
+        <li class="nav__item">
+          <a
+            href="#home"
+            class="nav__link"
+            data-nav-link
+            aria-label="home"
+            >Home</a
+          >
+        </li>
+        <li class="nav__item">
+          <a
+            href="#about"
+            class="nav__link"
+            data-nav-link
+            aria-label="about"
+            >How it’s made?</a
+          >
+        </li>
+        <li class="nav__item">
+          <a
+            href="#products"
+            class="nav__link"
+            data-nav-link
+            aria-label="products"
+            >Our products</a
+          >
+        </li>
+        <li class="nav__item">
+          <a
+            href="#contacts"
+            class="nav__link"
+            data-nav-link
+            aria-label="contact"
+            >Contact</a
+          >
+        </li>
+      </ul>
+      <button
+        type="button"
+        class="primary-btn header__btn"
+        data-buy-mobile-open
+        data-nav-link
+        aria-label="buy now"
+      >
+        Buy now
+        <svg class="arrow-icon">
+          <use href="./images/sprite.svg#icon-arrow"></use>
+        </svg>
+      </button>
+    </nav>
+    <button
+      type="button"
+      class="nav__btn"
+      data-menu-button
+      aria-label="open mobile menu"
+    >
+      <svg
+        class="nav__icon"
+        aria-label="open mobile menu"
+        width="32"
+        height="32"
+      >
+        <use class="nav__open" href="./images/sprite.svg#icon-burger"></use>
+        <use class="nav__close" href="./images/sprite.svg#icon-cross"></use>
+      </svg>
+    </button>
+    <button
+      type="button"
+      class="primary-btn header__tablet-btn"
+      data-buy-desktop-open
+      aria-label="buy now"
+    >
+      Buy now
+      <svg class="arrow-icon">
+        <use href="./images/sprite.svg#icon-arrow"></use>
+      </svg>
+    </button>
+  </div>
+</header>
+<section class="hero">
+  <div class="container">
+    <h1 class="hero__heading animate__animated animate__backInLeft">
+      ice cream made with <span class="hero__heading--accent">passion</span>
+    </h1>
+    <div class="hero__buttons animate__animated animate__backInLeft">
+      <a href="#products" class="adaptive-btn" aria-label="products"
+        >Products</a
+      >
+      <a href="#about" class="hero__link" aria-label="about">How it's made?</a>
+    </div>
+    <div class="hero__imgs">
+      <svg class="hero__dots">
+        <use href="./images/sprite.svg#icon-dots-sm-1"></use>
+      </svg>
+      <svg class="hero__dots--tablet">
+        <use href="./images/sprite.svg#icon-dots-md-1"></use>
+      </svg>
+      <img src="./images/dots-lg.png" alt="" class="hero__dots--desktop" />
+      <picture class="hero__img animate__animated animate__backInRight">
+        <source
+          media="(min-width: 1200px)"
+          srcset="
+            ./images/header-hero/ice-cream-main-455-lg.png    1x,
+            ./images/header-hero/ice-cream-main-910-lg-2x.png 2x
+          "
+          type="image/png"
+        />
+        <source
+          media="(min-width: 768px)"
+          srcset="./images/header-hero/ice-cream-main-270-md.png"
+          type="image/png"
+        />
+        <source
+          media="(max-width: 767px)"
+          srcset="
+            ./images/header-hero/ice-cream-main-170-sm.png    1x,
+            ./images/header-hero/ice-cream-main-340-sm-2x.png 2x
+          "
+          type="image/png"
+        />
+        <img
+          src="./images/header-hero/ice-cream-main-170-sm.png"
+          alt="ice-cream"
+        />
+      </picture>
+    </div>
+    <div class="hero__tablet animate__animated animate__backInLeft">
+      <picture>
+        <source
+          media="(min-width: 1200px)"
+          srcset="./images/header-hero/many-ice-cream-450-2x.png"
+          type="image/png"
+        />
+        <source
+          media="(min-width: 768px)"
+          srcset="./images/header-hero/many-ice-cream-304md-2x.png"
+          type="image/png"
+        />
+        <source
+          media="(max-width: 767px)"
+          srcset="
+            ./images/header-hero/many-ice-cream-152md.png    1x,
+            ./images/header-hero/many-ice-cream-304md-2x.png 2x
+          "
+          type="image/png"
+        />
+        <img
+          src="./images/header-hero/many-ice-cream-152md.png"
+          alt="ice-cream"
+          class="hero__plate"
+          id="plate"
+        />
+      </picture>
+      <div class="hero__descr">
+        <p class="hero__text">
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+          eiusmod tempor incididunt ut labore et
+        </p>
+        <a href="#" class="hero__arrows" aria-label="about">
+          <svg class="hero__arrow">
+            <use href="./images/sprite.svg#icon-arrow-1"></use>
+          </svg>
+        </a>
+      </div>
+    </div>
+    <div class="hero__numbers animate__animated animate__backInRight">
+      <ul>
+        <li class="hero__numbers--mb">
+          <span class="hero__number">16</span>cafes
+        </li>
+        <li class="hero__numbers--mb">
+          <span class="hero__number">23</span>food trucks
+        </li>
+      </ul>
+    </div>
+  </div>
+</section>
+<button
+  onclick="topFunction()"
+  id="myBtn"
+  title="Go to top"
+  class="adaptive-btn"
+  aria-label="go to top"
+>
+  ↑ To top
+</button>

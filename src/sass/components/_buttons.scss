@@ -1,0 +1,82 @@
+%btn {
+  font-family: $main-font;
+  font-weight: 600;
+  font-size: 14px;
+  line-height: calc(18 / 14);
+
+  padding: 12px 34px;
+  border-radius: 10px;
+
+  cursor: $cursor-dark;
+
+  color: #000;
+}
+
+.primary-btn {
+  @extend %btn;
+  background-color: $accent-color;
+
+  border: none;
+
+  transition-property: background-color;
+  transition-duration: 250ms;
+  transition-timing-function: $cubic-bezier;
+
+  &:hover {
+    background-color: $dark-green;
+  }
+
+  &:focus {
+    background-color: $dark-green;
+    color: $white;
+  }
+
+  &:disabled {
+    background-color: $grey-text;
+  }
+}
+
+.secondary-btn {
+  @extend %btn;
+  background-color: transparent;
+  border: 2px solid $accent-color;
+  padding: 9px 31px;
+
+  transition-property: border-color;
+  transition-duration: 250ms;
+  transition-timing-function: $cubic-bezier;
+
+  &:hover {
+    border-color: $dark-green;
+  }
+
+  &:focus {
+    border-color: $dark-green;
+    color: $white;
+  }
+
+  &:disabled {
+    border-color: $grey-text;
+  }
+}
+
+.adaptive-btn {
+  @extend .secondary-btn;
+
+  @media (max-width: 1199.5px) {
+    padding: 6px 10px;
+
+    font-weight: 600;
+    font-size: 8px;
+    line-height: calc(10 / 8);
+    letter-spacing: normal;
+  }
+}
+
+.arrow-icon {
+  width: 12px;
+  height: 12px;
+  fill: none;
+  stroke: currentColor;
+  padding-top: 1px;
+}

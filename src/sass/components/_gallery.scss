@@ -1,0 +1,80 @@
+.gallery {
+  background: none;
+  background: linear-gradient(to bottom, $main-color 24px, transparent 24px);
+
+  @include tablet {
+    background: linear-gradient(to bottom, $main-color 50%, transparent 50%);
+  }
+
+  @include desktop {
+    background: linear-gradient(to bottom, $main-color 94px, transparent 94px);
+  }
+
+  .gallery__wrapper {
+    margin: 0 auto;
+    height: 130px;
+
+    min-width: 279px;
+    height: 130px;
+
+    background: transparent;
+
+    @include tablet-only {
+      height: 327px;
+      width: 704px;
+    }
+
+    @include desktop {
+      height: 422px;
+      width: 1013px;
+    }
+  }
+
+  .gallery__img {
+    width: 100%;
+    border-radius: 7.5px;
+    object-fit: cover;
+    
+    height: 130px;
+    @include tablet-only {
+      height: 327px;
+      border-radius: 24px;
+    }
+
+    @include desktop {
+      height: 422px;
+      border-radius: 24px;
+    }
+  }
+
+  .animate__slideInRight {
+    animation: fadeIn 750ms $cubic-bezier;
+  }
+
+  @keyframes fadeIn {
+    0% {
+      opacity: 0%;
+    }
+    100% {
+      opacity: 100%;
+    }
+  }
+
+  .swing-in-top-fwd {
+    animation: swing-in-top-fwd 750ms $cubic-bezier both;
+  }
+
+  @keyframes swing-in-top-fwd {
+    0% {
+      transform: rotateX(-100deg);
+      transform-origin: top;
+      opacity: 0;
+    }
+    100% {
+      transform: rotateX(0deg);
+      transform-origin: top;
+      opacity: 1;
+    }
+  }
+}
+
